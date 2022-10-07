@@ -1,0 +1,23 @@
+{% extends "_layout.html" %}
+{% block title %}{{description}}{% endblock title %}
+{% block content %}
+<h1>{{description}}</h1>
+<table>
+    <thead class="bold">
+    <td>Name</td>
+    <td class="right">Orders</td>
+    <td class="right">Revenue</td>
+    </thead>
+    <tbody>
+    {% for i in items %}
+    <tr>
+        <td>
+            <a href="https://www.aliexpress.com/category/{{i._id}}/anything-here.html" target="_blank" class="">{{i.name}}</a>
+        </td>
+        <td class="right">{{i.orders | default(value="?") }}</td>
+        <td class="right">{{i.revenue | round(method="ceil", precision=0) }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

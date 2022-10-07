@@ -1,0 +1,23 @@
+{% extends "_layout.html" %}
+{% block title %}{{description}}{% endblock title %}
+{% block content %}
+<h1>{{description}}</h1>
+<ul class="list">
+    {% for i in items %}
+    <li>
+        <div class="anti-overflow">
+            <a href="https://www.aliexpress.com/store/{{i._id}}" target="_blank" class="bold">{{i.name}}</a>
+        </div>
+        <div>
+            <span class="badge">&#x1F3E6; {{i.revenue | default(value="?")}}</span>
+            <span class="badge">&#x1F6CD; {{i.orders | default(value="?") }}</span>
+            <span class="badge">&#x1F44D; {{i.rating45_count | default(value="?") }}</span>
+            <span class="badge">&#x1F44E; {{i.rating12_count | default(value="?") }}</span>
+            <span class="badge">&#x1F929; {{i.rating45_ratio | default(value="?") }}%</span>
+            <span class="badge">&#x1F4C6; {{i.online_at | date(format="%Y-%m-%d") }}</span>
+
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

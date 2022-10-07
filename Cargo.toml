@@ -1,0 +1,36 @@
+[package]
+name = "dropshipping"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "dropshipping"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1.0.85"
+js-sandbox = "0.1.6"
+ureq = "2.5.0"
+url = { version = "2.3.1", features = ["serde"] }
+scraper = { version = "0.13.0" }
+serde = {version = "1.0.145", features = ["derive"]}
+rand = "0.8.5"
+serde_repr = "0.1.9"
+chrono = { version = "0.4.22", features = ["serde"]}
+clap = { version="4.0.17", features = ["derive"] }
+mongodb = {version = "2.3.1", default-features = false, features = ["sync"]}
+tera = {version = "1.17.1", default-features = false, features = ["date-locale"]}
+poloto = "16.2.6"
+hypermelon = "0.4.0"
+fs_extra = "1.2.0"
+num-format = "0.4.3"
+minify-html = "0.10.2"
+
+[dev-dependencies]
+assert_cmd = "2.0.4"
+predicates = "2.1.1"
+
+[profile.release]
+lto = true
+strip = true

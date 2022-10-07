@@ -1,0 +1,84 @@
+{% extends "_layout.html" %}
+{% block title %}Report Index{% endblock title %}
+{% block content %}
+<h1>Analysis Result Index</h1>
+<h2>Summary</h2>
+<table class="key-value">
+    <tr>
+        <td>Products</td>
+        <td>{{database.product_count}}</td>
+    </tr>
+    <tr>
+        <td>Stores</td>
+        <td>{{database.store_count}}</td>
+    </tr>
+    <tr>
+        <td>Categories</td>
+        <td>{{database.category_count}}</td>
+    </tr>
+    <tr>
+        <td>Started At</td>
+        <td>{{started_at}}</td>
+    </tr>
+    <tr>
+        <td>Finished In</td>
+        <td>{{finished_in}}</td>
+    </tr>
+    <tr>
+        <td>Platform</td>
+        <td>{{platform}}</td>
+    </tr>
+</table>
+<h2>Table of Contents</h2>
+<ul>
+    <li>
+        <a href="distribution.html">Distribution</a>
+    </li>
+    <li>
+        <a href="timeline.html">Timeline</a>
+    </li>
+    <li>
+        <a href="#">Top</a>
+        <ul>
+            <li>
+                <a href="top_level_1_categories_by_revenue.html">Level 1 Categories by Revenue</a>
+            </li>
+            <li>
+                <a href="top_level_2_categories_by_revenue.html">Level 2 Categories by Revenue</a>
+            </li>
+            <li>
+                <a href="top_products_by_revenue.html">Products by Revenue</a>
+            </li>
+            <li>
+                <a href="top_products_by_orders.html">Products by Orders</a>
+            </li>
+            <li>
+                <a href="top_products_by_highest_price.html">Products by Highest Price</a>
+            </li>
+            <li>
+                <a href="top_products_by_lowest_price.html">Products by Lowest Price</a>
+            </li>
+            <li>
+                <a href="top_products_by_rating.html">Products by Rating</a>
+            </li>
+            <li>
+                <a href="top_stores_by_revenue.html">Stores by Revenue</a>
+            </li>
+            <li>
+                <a href="top_stores_by_orders.html">Stores by Orders</a>
+            </li>
+            <li>
+                <a href="top_stores_by_online_time.html">Stores by Online Time</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">Prospect Products</a>
+        <ul>
+            <li>
+                <a href="prospect_products_by_points.html">By Points</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock content %}

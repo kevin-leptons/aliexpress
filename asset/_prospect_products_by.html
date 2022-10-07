@@ -1,0 +1,28 @@
+{% extends "_layout.html" %}
+{% block title %}{{description}}{% endblock title %}
+{% block content %}
+<h1>{{description}}</h1>
+<ul class="list">
+    {% for i in items %}
+    <li>
+        <div class="anti-overflow">
+            <a href="https://www.aliexpress.com/item/{{i._id}}.html" target="_blank" class="bold">{{i.name}}</a>
+        </div>
+        <div>
+            <span class="badge">&#x1F3E6; {{i.revenue | default(value="?")}}</span>
+            <span class="badge">&#x1F4B5; {{i.price}}</span>
+            <span class="badge">&#x1F6CD; {{i.orders | default(value="?") }}</span>
+            <span class="badge">&#x1F69A; {{i.shipping_fee | default(value="?") }}</span>
+            <span class="badge">&#x1F929; {{i.rating | default(value="?") }}</span>
+            <span class="badge">&#x1F356; {{i.points | default(value="?") }}</span>
+        </div>
+        <div class="anti-overflow">
+            <a href="https://www.aliexpress.com/store/{{i.store_identity}}" target="_blank" class="smaller">{{i.store_name}}</a>
+        </div>
+        <div class="img-slot">
+            <img src="{{i.image_url}}" alt="image not found" loading="lazy">
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

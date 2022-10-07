@@ -1,0 +1,20 @@
+ALIEXPRESS
+==========
+
+    Claw and make report for products on `aliexpress.com`. Maybe it does not
+    work because of Aliexpress change their APIs structure.
+
+GETTING STARTED
+===============
+
+    # Copy and modify configuration.
+    cp sample_config.json config.json
+
+    # Pull data from website.
+    cargo run -- pull
+    
+    # Analyze and get report.
+    cargo run -- analyze
+    
+    # Print out commands and it's descriptions.
+    cargo run 

@@ -1,0 +1,11 @@
+tmp/
+target/
+.idea/
+.fleet/
+.vscode/
+Cargo.lock
+config.json
+.DS_Store
+*.swp
+*.swo
+._*

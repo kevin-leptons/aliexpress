@@ -1,0 +1,19 @@
+{
+  "log_directory": "tmp/log",
+  "report_directory": "tmp/report",
+  "mongo_endpoint": "mongodb://localhost/dropshipping",
+  "pulling": {
+    "category": [
+      15,
+      125
+    ],
+    "category_pages": 30
+  },
+  "analyst": {
+    "miner_cost_lower": 5,
+    "miner_cost_upper": 10,
+    "miner_orders_lower": 1,
+    "miner_orders_upper": 20
+  }
+}
+

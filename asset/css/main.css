@@ -1,0 +1,127 @@
+:root {
+    --border-color: #818181;
+    --background-color: #e3e3e3;
+    --primary-color: black;
+    --hover-color: #3B77BC;
+}
+@font-face {
+    font-family: "jetbrains";
+    src: url("../font/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+body {
+    background: var(--background-color);
+    font-family: jetbrains;
+}
+img {
+    width: 100%;
+}
+#view {
+    width: 100%;
+}
+ul.nav {
+    padding: 0 0 8px;
+    border-bottom: 1px dotted var(--border-color);
+}
+ul.nav li {
+    display: inline-block;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 4px;
+}
+div.img-slot {
+    width: 100%;
+    height: calc(100vw - 16px);
+    border: 1px dotted var(--border-color);
+    border-radius: 4px;
+    margin-top: 8px;
+    position: relative;
+}
+div.img-slot:after {
+    content: "\23F3";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    z-index: -1;
+}
+div.img-slot img {
+    display: block;
+    border-radius: 4px;
+}
+@media screen and (min-width: 794px) {
+    #view {
+        width: 794px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    div.img-slot {
+        width: 25%;
+        height: 198px;
+        display: block;
+    }
+}
+
+table.key-value tr td:nth-child(1) {
+    font-weight: bold;
+}
+table.key-value tr td {
+    vertical-align: top;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover {
+    color: var(--hover-color);
+}
+ul {
+    list-style-position: inside;
+}
+ul.list {
+    list-style: none;
+    padding: 0;
+}
+ul.list li {
+    padding: 16px 0;
+    border-bottom: 1px dotted var(--border-color);
+}
+.anti-overflow {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 4px 0;
+}
+.bold {
+    font-weight: bold;
+}
+.smaller {
+    font-size: 0.8em;
+}
+.badge {
+    border: 1px dotted var(--border-color);
+    border-radius: 4px;
+    padding: 2px 4px;
+    display: inline-block;
+    margin: 4px 8px 4px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr {
+    border-bottom: 1px dotted var(--border-color);
+}
+table td {
+    padding: 4px 0;
+}
+.right {
+    text-align: right;
+}
